@@ -1,0 +1,22 @@
+{
+  "name": "aquarius",
+  "version": "1.0.0",
+  "description": "Aquarius",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.1",
+    "mongoose-bcrypt": "^1.6.0",
+    "mongoose-paginate": "^5.0.3",
+    "require-dir": "^1.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  },
+  "scripts": {
+    "dev": "nodemon server.js"
+  }
+}
