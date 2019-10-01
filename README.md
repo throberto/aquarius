@@ -1,0 +1,13 @@
+# aquarius
+Projeto Interdisciplinar III e IV - UNIFEOB.
+
+## O que é?
+Aquarius é um aplicativo para dispositivos móveis que promove o controle e gerenciamento dos aquários do usuário.
+
+## Construção
+1. Clone o repositório em seu ambiente de desenvolvimento:
+
+    `git clone https://github.com/thiagomicron/aquarius.git`
+2. Adicione as dependências do projeto em `backend` ou `mobile`:
+
+    `yarn install` ou `npm install`
