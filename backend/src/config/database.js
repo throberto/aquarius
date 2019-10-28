@@ -6,10 +6,10 @@ const dbPath = 'mongodb+srv://'
   + '@cluster0-hjwkl.mongodb.net/' + process.env.MONGODB_NAME;
 
 const options = {
-  useNewUrlParser: true,  // ???
-  useUnifiedTopology: true, // ???
-  useCreateIndex: true, // ???
-  useFindAndModify: false,  // ???
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
 }
 
 mongoose.connect(dbPath, options);

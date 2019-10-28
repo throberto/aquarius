@@ -3,12 +3,12 @@ const mongoosePaginate = require('mongoose-paginate');
 
 const AquariumFishSchema = mongoose.Schema({
   aquarium_id: {
-    type: Object,
+    type: mongoose.Schema.Types.ObjectId,
     required: true,
     ref: 'Aquarium',
   },
   fish_id: {
-    type: Object,
+    type: mongoose.Schema.Types.ObjectId,
     required: true,
     ref: 'Fish',
   },
