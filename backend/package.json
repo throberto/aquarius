@@ -2,7 +2,7 @@
   "name": "aquarius",
   "version": "1.0.0",
   "description": "Aquarius",
-  "main": "server.js",
+  "main": "./src",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
