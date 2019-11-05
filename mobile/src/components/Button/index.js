@@ -1,11 +1,11 @@
 import React from "react";
-
-import { TouchableOpacity, Text } from "react-native";
+import { TouchableOpacity, Text, View } from "react-native";
+import { Button, ButtonText } from "./styles";
 
 const ButtonComponent = props => (
-  <TouchableOpacity>
-    <Text>OPA</Text>
-  </TouchableOpacity>
+  <Button>
+    <ButtonText>Acessar</ButtonText>
+  </Button>
 );
 
 export default ButtonComponent;
