@@ -4,8 +4,12 @@ import { Button, ButtonText } from "./styles";
 
 const ButtonComponent = props => (
   <Button>
-    <ButtonText>Acessar</ButtonText>
+    <ButtonText>{props.name}</ButtonText>
   </Button>
 );
+
+ButtonComponent.defaultsProps = {
+  name: "Login"
+};
 
 export default ButtonComponent;
