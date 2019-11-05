@@ -10,6 +10,7 @@ export default class UserSignIn extends Component {
     return (
       <View>
         <Text>OI</Text>
+        <ButtonComponent />
       </View>
     );
   }
