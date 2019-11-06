@@ -8,6 +8,17 @@ import LogoComponent from "../../components/Logo";
 import { Container, View } from "./styles";
 
 export default class UserRegister extends Component {
+  static navigationOptions = {
+    title: "Criar Conta",
+    headerStyle: {
+      backgroundColor: "#0042FF"
+    },
+    headerTintColor: "#fff",
+    headerTitleStyle: {
+      fontWeight: "bold"
+    }
+  };
+
   render() {
     return (
       <Container behavior="padding">

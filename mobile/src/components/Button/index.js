@@ -1,15 +1,22 @@
 import React from "react";
-import { TouchableOpacity, Text, View } from "react-native";
+import PropTypes from "prop-types";
+
 import { Button, ButtonText } from "./styles";
 
 const ButtonComponent = props => (
-  <Button>
-    <ButtonText>{props.name}</ButtonText>
+  <Button onPress={props.onPress}>
+    <ButtonText>{props.title}</ButtonText>
   </Button>
 );
 
-ButtonComponent.defaultsProps = {
-  name: "Login"
+ButtonComponent.PropTypes = {
+  title: PropTypes.string.isRequired,
+  onPress: PropTypes.func
+};
+
+ButtonComponent.defaultProps = {
+  title: "Pressione",
+  onPress: null
 };
 
 export default ButtonComponent;

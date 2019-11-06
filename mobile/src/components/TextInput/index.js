@@ -4,7 +4,7 @@ import { TextInput } from "./styles";
 
 const TextInputComponent = props => (
   <View>
-    <TextInput placeholder={(text = props.name)} />
+    <TextInput placeholder="..." />
   </View>
 );
 

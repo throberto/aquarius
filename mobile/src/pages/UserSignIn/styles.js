@@ -13,5 +13,5 @@ export const BtnText = styled.Text`
 export const View = styled.View`
   align-items: center;
   justify-content: center;
-  margin-top: 100;
+  margin-top: 10;
 `;
