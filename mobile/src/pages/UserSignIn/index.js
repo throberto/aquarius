@@ -5,11 +5,12 @@ import { StackActions, NavigationActions } from "react-navigation";
 import ButtonComponent from "../../components/Button";
 import TextInputComponent from "../../components/TextInput";
 import LogoComponent from "../../components/Logo";
+import TextButtonComponent from "../../components/TextButton";
 
 StatusBar.setBackgroundColor("#1793F9");
 StatusBar.setBarStyle("light-content");
 
-import { Container, BtnText, View } from "./styles";
+import { Container, View } from "./styles";
 
 export default class UserSignIn extends Component {
   static navigationOptions = {
@@ -31,31 +32,34 @@ export default class UserSignIn extends Component {
     this.props.navigation.navigate("UserResetPassword");
   };
 
-  // handleUserAccessPress = async () => {
-  // axios
-  // };
-
-  handleUserAccessPress = () => {
-    this.props.navigation.navigate("UserProfile")
-  }
+  handleUserAccessPress = async () => {
+    // axios
+  };
 
   render() {
     return (
       <Container behavior="padding">
         <LogoComponent />
         <View>
-          <TextInputComponent placeholder="Email" keyboardType="email-address" />
-          <TextInputComponent placeholder="Senha" />
+          <TextInputComponent
+            placeholder="Email"
+            keyboardType="email-address"
+          />
+          <TextInputComponent placeholder="Senha" secureTextEntry={true} />
           <ButtonComponent
             title="Entrar"
             onPress={() => this.handleUserAccessPress()}
+            inputColor="#0099ff"
           />
-          <TouchableOpacity onPress={() => this.handleUserRegisterPress()}>
-            <BtnText>Criar conta grátis</BtnText>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => this.handleUserResetPasswordPress()}>
-            <BtnText>Esqueceu sua senha?</BtnText>
-          </TouchableOpacity>
+
+          <TextButtonComponent
+            title="Registrar"
+            onPress={() => this.handleUserRegisterPress()}
+          />
+          <TextButtonComponent
+            title="Esqueceu sua senha?"
+            onPress={() => this.handleUserResetPasswordPress()}
+          />
         </View>
       </Container>
     );

@@ -28,9 +28,12 @@ export default class UserRegister extends Component {
         <LogoComponent />
         <View behavior="padding">
           <TextInputComponent placeholder="Nome" />
-          <TextInputComponent placeholder="Email" keyboardType="email-address" />
-          <TextInputComponent placeholder="Senha" />
-          <ButtonComponent name="Cadastrar" />
+          <TextInputComponent
+            placeholder="Email"
+            keyboardType="email-address"
+          />
+          <TextInputComponent placeholder="Senha" secureTextEntry={true} />
+          <ButtonComponent title="Cadastrar" />
         </View>
       </Container>
     );

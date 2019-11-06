@@ -11,7 +11,8 @@ const ButtonComponent = props => (
 
 ButtonComponent.propTypes = {
   title: propTypes.string.isRequired,
-  onPress: propTypes.func
+  onPress: propTypes.func,
+  Color: propTypes.string
 };
 
 ButtonComponent.defaultProps = {

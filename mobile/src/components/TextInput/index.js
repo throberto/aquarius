@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
-import propTypes from 'prop-types';
+import propTypes from "prop-types";
 
 import { TextInput } from "./styles";
 
@@ -23,15 +23,14 @@ TextInputComponent.propTypes = {
   onChangeText: propTypes.func,
   value: propTypes.string,
   secureTextEntry: propTypes.bool,
-  keyboardType: propTypes.string,
+  keyboardType: propTypes.string
 };
 
 TextInputComponent.defaultProps = {
-  placeholder: 'Digite...',
+  placeholder: "Digite...",
   onChangeText: null,
   // value: '',
   secureTextEntry: false,
-  keyboardType: 'default',
+  keyboardType: "default"
 };
 export default TextInputComponent;
-

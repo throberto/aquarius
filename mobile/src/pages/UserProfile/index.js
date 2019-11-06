@@ -25,10 +25,19 @@ export default class UserProfile extends Component {
     return (
       <Container>
         <View>
-          <TextInputComponent placeholder="Email" keyboardType="email-address" />
-          <TextInputComponent placeholder="Senha atual" />
-          <TextInputComponent placeholder="Nova senha" />
-          <TextInputComponent placeholder="Confirmar senha" />
+          <TextInputComponent
+            placeholder="Email"
+            keyboardType="email-address"
+          />
+          <TextInputComponent
+            placeholder="Senha atual"
+            secureTextEntry={true}
+          />
+          <TextInputComponent placeholder="Nova senha" secureTextEntry={true} />
+          <TextInputComponent
+            placeholder="Confirmar senha"
+            secureTextEntry={true}
+          />
 
           <ButtonComponent title="Atualizar" />
           <ButtonComponent title="Deletar conta" />
