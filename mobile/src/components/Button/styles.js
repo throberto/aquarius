@@ -8,8 +8,7 @@ export const Button = styled.TouchableOpacity`
   width: 300;
   align-items: center;
   justify-content: center;
-  margin: 30px;
-  /* margin-left: 10%; */
+  margin-top: 30px;
 `;
 
 export const ButtonText = styled.Text`

@@ -7,5 +7,5 @@ export const Container = styled.KeyboardAvoidingView`
 export const View = styled.KeyboardAvoidingView`
   align-items: center;
   justify-content: center;
-  margin-top: 100;
+  margin-top: 10;
 `;

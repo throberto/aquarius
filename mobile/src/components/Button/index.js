@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 import { Button, ButtonText } from "./styles";
 
@@ -9,9 +9,9 @@ const ButtonComponent = props => (
   </Button>
 );
 
-ButtonComponent.PropTypes = {
-  title: PropTypes.string.isRequired,
-  onPress: PropTypes.func
+ButtonComponent.propTypes = {
+  title: propTypes.string.isRequired,
+  onPress: propTypes.func
 };
 
 ButtonComponent.defaultProps = {

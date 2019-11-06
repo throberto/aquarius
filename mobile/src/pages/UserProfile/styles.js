@@ -1,12 +1,11 @@
-import styled from "styled-components/native";
+import styled from 'styled-components/native';
 
 export const Container = styled.KeyboardAvoidingView`
   flex: 1;
-  align-items: center;
 `;
 
-export const View = styled.View`
+export const View = styled.KeyboardAvoidingView`
   align-items: center;
   justify-content: center;
-  margin-top: 10;
+  margin-top: 100;
 `;

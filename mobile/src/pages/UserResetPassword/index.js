@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StatusBar } from "react-native";
 
-StatusBar.setBackgroundColor("#0042FF");
+StatusBar.setBackgroundColor("#1793F9");
 StatusBar.setBarStyle("light-content");
 
 import ButtonComponent from "../../components/Button";
@@ -14,7 +14,7 @@ export default class UserResetPassword extends Component {
   static navigationOptions = {
     title: "Recuperar Senha",
     headerStyle: {
-      backgroundColor: "#0042FF"
+      backgroundColor: "#0099ff"
     },
     headerTintColor: "#fff",
     headerTitleStyle: {
@@ -27,7 +27,7 @@ export default class UserResetPassword extends Component {
       <Container behavior="padding">
         <LogoComponent />
         <View>
-          <TextInputComponent name="Email" />
+          <TextInputComponent placeholder="Email" keyboardType="email-address" />
           <ButtonComponent name="Enviar" />
         </View>
       </Container>

@@ -6,7 +6,7 @@ import ButtonComponent from "../../components/Button";
 import TextInputComponent from "../../components/TextInput";
 import LogoComponent from "../../components/Logo";
 
-StatusBar.setBackgroundColor("#0042FF");
+StatusBar.setBackgroundColor("#1793F9");
 StatusBar.setBarStyle("light-content");
 
 import { Container, BtnText, View } from "./styles";
@@ -15,7 +15,7 @@ export default class UserSignIn extends Component {
   static navigationOptions = {
     title: "Aquarius",
     headerStyle: {
-      backgroundColor: "#0042FF"
+      backgroundColor: "#0099ff"
     },
     headerTintColor: "#fff",
     headerTitleStyle: {
@@ -31,17 +31,21 @@ export default class UserSignIn extends Component {
     this.props.navigation.navigate("UserResetPassword");
   };
 
-  handleUserAccessPress = async () => {
-    // axios
-  };
+  // handleUserAccessPress = async () => {
+  // axios
+  // };
+
+  handleUserAccessPress = () => {
+    this.props.navigation.navigate("UserProfile")
+  }
 
   render() {
     return (
       <Container behavior="padding">
         <LogoComponent />
         <View>
-          <TextInputComponent name="Email" />
-          <TextInputComponent name="Senha" />
+          <TextInputComponent placeholder="Email" keyboardType="email-address" />
+          <TextInputComponent placeholder="Senha" />
           <ButtonComponent
             title="Entrar"
             onPress={() => this.handleUserAccessPress()}
