@@ -44,12 +44,17 @@ export default class UserSignIn extends Component {
           <TextInputComponent
             placeholder="Email"
             keyboardType="email-address"
+            borderRadius={30}
           />
-          <TextInputComponent placeholder="Senha" secureTextEntry={true} />
+          <TextInputComponent
+            placeholder="Senha"
+            secureTextEntry={true}
+            borderRadius={30}
+          />
           <ButtonComponent
             title="Entrar"
             onPress={() => this.handleUserAccessPress()}
-            inputColor="#0099ff"
+            borderRadius={30}
           />
 
           <TextButtonComponent

@@ -3,6 +3,7 @@ import { View, Text } from "react-native";
 import propTypes from "prop-types";
 
 import { TextInput } from "./styles";
+import TextInputStyles from "./styles";
 
 const TextInputComponent = props => (
   <View>
@@ -14,6 +15,7 @@ const TextInputComponent = props => (
       value={props.value}
       secureTextEntry={props.secureTextEntry}
       keyboardType={props.keyboardType}
+      style={TextInputStyles(props).input}
     />
   </View>
 );
@@ -23,7 +25,8 @@ TextInputComponent.propTypes = {
   onChangeText: propTypes.func,
   value: propTypes.string,
   secureTextEntry: propTypes.bool,
-  keyboardType: propTypes.string
+  keyboardType: propTypes.string,
+  borderRadius: propTypes.number
 };
 
 TextInputComponent.defaultProps = {
@@ -31,6 +34,7 @@ TextInputComponent.defaultProps = {
   onChangeText: null,
   // value: '',
   secureTextEntry: false,
-  keyboardType: "default"
+  keyboardType: "default",
+  borderRadius: 5
 };
 export default TextInputComponent;

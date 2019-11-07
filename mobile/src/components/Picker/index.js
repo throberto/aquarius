@@ -17,14 +17,4 @@ const PickerComponent = props => (
   </Picker>
 );
 
-// ButtonComponent.propTypes = {
-//   title: propTypes.string.isRequired,
-//   onPress: propTypes.func
-// };
-
-// ButtonComponent.defaultProps = {
-//   title: "Pressione",
-//   onPress: null
-// };
-
 export default PickerComponent;

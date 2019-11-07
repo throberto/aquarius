@@ -8,5 +8,4 @@ export const Picker = styled.Picker`
   background-color: #f5f5f5;
   align-items: center;
   justify-content: center;
-  border-radius: 50;
 `;

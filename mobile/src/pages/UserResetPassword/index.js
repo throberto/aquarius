@@ -27,8 +27,12 @@ export default class UserResetPassword extends Component {
       <Container behavior="padding">
         <LogoComponent />
         <View>
-          <TextInputComponent placeholder="Email" keyboardType="email-address" />
-          <ButtonComponent name="Enviar" />
+          <TextInputComponent
+            placeholder="Email"
+            keyboardType="email-address"
+            borderRadius={30}
+          />
+          <ButtonComponent name="Enviar" borderRadius={30} />
         </View>
       </Container>
     );
