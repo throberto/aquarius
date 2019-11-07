@@ -4,8 +4,8 @@ export const Container = styled.KeyboardAvoidingView`
   flex: 1;
 `;
 
-export const View = styled.View`
+export const View = styled.KeyboardAvoidingView`
   align-items: center;
   justify-content: center;
-  margin-top: 20;
+  margin-top: 10;
 `;

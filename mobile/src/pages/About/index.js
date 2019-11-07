@@ -1,11 +1,51 @@
 import React, { Component } from "react";
+import { StatusBar, TouchableOpacity } from "react-native";
+import { StackActions, NavigationActions } from "react-navigation";
 
-import { View } from "react-native";
+import ButtonComponent from "../../components/Button";
+import TextInputComponent from "../../components/TextInput";
+import LogoComponent from "../../components/Logo";
+import TextButtonComponent from "../../components/TextButton";
 
-// import { Container } from './styles';
+StatusBar.setBackgroundColor("#1793F9");
+StatusBar.setBarStyle("light-content");
+
+import { Container, View, TitleText, AboutText } from "./styles";
 
 export default class About extends Component {
+  static navigationOptions = {
+    title: "Sobre",
+    headerStyle: {
+      backgroundColor: "#0099ff"
+    },
+    headerTintColor: "#fff",
+    headerTitleStyle: {
+      fontWeight: "bold"
+    }
+  };
+
   render() {
-    return <View />;
+    return (
+      <Container behavior="padding">
+        <LogoComponent />
+        <View>
+          <TitleText>Sobre nós</TitleText>
+
+          <AboutText>
+            Os peixes são a Quarta categoria de animais de estimacão mais
+            comuns no Brasil, atrás apenas de gatos, aves e cães, segundo o
+            o Instituto Brasileiro de Geografia e Estatísticas(IBGE2015). são
+            18 milhões de peixes ornamentais criados no país.
+            Com essa demanda cada vez mais crescente de mercado, muitos entusiastas acabam
+            entrando para o mundo do aquarismo sem os conhecimento dos cuidados basicos
+            a se ter e acabam se perdendo e cometendo erros que muitas vezes podem ser fatais
+            os peixes.
+            Visando ajudas essas pessoas, a proposta se baseia na criacão de uma ferramenta que
+            auxiliará na criacão e manutencão de um aquário.
+          </AboutText>
+
+        </View>
+      </Container>
+    );
   }
 }
