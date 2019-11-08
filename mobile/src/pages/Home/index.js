@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { StatusBar, Text, ScrollView } from "react-native";
 
 import ButtonComponent from "../../components/Button";
+import AquarioListComponent from "../../components/AquarioList";
 
 import { Container, View } from "./styles";
 
@@ -25,6 +26,7 @@ export default class Home extends Component {
       <Container behavior="padding">
         <ScrollView>
           <View>
+            <AquarioListComponent />
             <Text style={{ textAlign: "center" }}>
               Você ainda não tem nenhum aquario.
             </Text>

@@ -40,7 +40,7 @@ export default class UserProfile extends Component {
           />
 
           <ButtonComponent title="Atualizar" />
-          <ButtonComponent title="Deletar conta" />
+          <ButtonComponent title="Deletar conta" buttonColor="#F25252" />
         </View>
       </Container>
     );

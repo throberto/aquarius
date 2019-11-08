@@ -62,10 +62,14 @@ export default class UserSignIn extends Component {
   handleReminderRegister = () => {
     this.props.navigation.navigate("ReminderRegister");
   };
+
   handleAquariumRegister = () => {
     this.props.navigation.navigate("AquariumRegister");
   };
 
+  handleUserProfile = () => {
+    this.props.navigation.navigate("UserProfile");
+  };
   render() {
     return (
       <ScrollView>
@@ -108,6 +112,10 @@ export default class UserSignIn extends Component {
             <ButtonComponent
               title="AquariumRegister"
               onPress={() => this.handleAquariumRegister()}
+            />
+            <ButtonComponent
+              title="UserProfile"
+              onPress={() => this.handleUserProfile()}
             />
           </View>
         </Container>
