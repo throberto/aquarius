@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StatusBar, TouchableOpacity } from "react-native";
+import { StatusBar, TouchableOpacity, Alert } from "react-native";
 import { StackActions, NavigationActions } from "react-navigation";
 
 import ButtonComponent from "../../components/Button";
@@ -24,6 +24,11 @@ export default class UserSignIn extends Component {
     }
   };
 
+  state = {
+    email: "",
+    password: ""
+  };
+
   handleUserRegisterPress = () => {
     this.props.navigation.navigate("UserRegister");
   };
@@ -32,8 +37,23 @@ export default class UserSignIn extends Component {
     this.props.navigation.navigate("UserResetPassword");
   };
 
+  handlePasswordChange = password => {
+    this.setState({ password });
+  };
+
+  handleEmailChange = email => {
+    this.setState({ email });
+  };
+
   handleUserAccessPress = async () => {
-    // axios
+    if (this.state.email.length === 0 || this.state.password.length === 0) {
+      Alert.alert("Atenção", "Usuário/Senha são obrigatórios.");
+    } else {
+      Alert.alert(
+        "Bem Vindo",
+        "Email: " + this.state.email + " Senha: " + this.state.password
+      );
+    }
   };
 
   render() {
@@ -45,11 +65,15 @@ export default class UserSignIn extends Component {
             placeholder="Email"
             keyboardType="email-address"
             borderRadius={30}
+            onChangeText={this.handleEmailChange}
+            value={this.state.email}
           />
           <TextInputComponent
             placeholder="Senha"
             secureTextEntry={true}
             borderRadius={30}
+            onChangeText={this.handlePasswordChange}
+            value={this.state.password}
           />
           <ButtonComponent
             title="Entrar"
