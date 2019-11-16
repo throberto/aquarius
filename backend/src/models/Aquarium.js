@@ -8,14 +8,13 @@ const AquariumSchema = mongoose.Schema(
       required: true,
       ref: "User"
     },
-    identifier: {
+    environment: {
       type: String,
       required: true
     },
-    colorTheme: {
+    identifier: {
       type: String,
-      required: false,
-      default: "#1793F9"
+      required: true
     },
     description: {
       type: String,

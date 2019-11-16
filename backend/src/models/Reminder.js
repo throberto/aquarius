@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const mongoosePaginate = require("mongoose-paginate");
 
 const ReminderSchema = new mongoose.Schema(
   {
@@ -15,7 +16,7 @@ const ReminderSchema = new mongoose.Schema(
       type: String,
       required: true
     },
-    date: {
+    datetime: {
       type: Date,
       required: true
     },
@@ -29,5 +30,7 @@ const ReminderSchema = new mongoose.Schema(
     timestamps: true
   }
 );
+
+ReminderSchema.plugin(mongoosePaginate);
 
 mongoose.model("Reminder", ReminderSchema);

@@ -3,6 +3,12 @@ const mongoose = require("mongoose");
 const User = mongoose.model("User");
 
 module.exports = {
+  async index(req, res) {
+    const { page = 1 } = req.query;
+    const users = await User.paginate({}, { page, limit: 10 });
+
+    return res.json(users);
+  },
   async show(req, res) {
     const { idUser } = req.params;
     const user = await User.findById(idUser);
