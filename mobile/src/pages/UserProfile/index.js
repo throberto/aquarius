@@ -38,9 +38,7 @@ export default class UserProfile extends Component {
             placeholder="Confirmar senha"
             secureTextEntry={true}
           />
-
           <ButtonComponent title="Atualizar" />
-          <ButtonComponent title="Deletar conta" buttonColor="#F25252" />
         </View>
       </Container>
     );

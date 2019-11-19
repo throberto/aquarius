@@ -42,7 +42,7 @@ export default class HelpRegister extends Component {
       <Container behavior="padding">
         <View behavior="padding">
           <TextInputComponent
-            placeholder="Email"
+            placeholder="Escreva a sua duvida."
             keyboardType="email-address"
             onChangeText={this.handleEmailChange}
             value={this.setState.email}
