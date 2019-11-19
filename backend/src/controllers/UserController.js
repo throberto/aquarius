@@ -41,7 +41,8 @@ module.exports = {
     return res.json(user);
   },
   async update(req, res) {
-    const user = await User.findOneAndUpdate(req.params.id, req.body, {
+    const { idUser } = req.params;
+    const user = await User.findOneAndUpdate(idUser, req.body, {
       new: true
     });
 

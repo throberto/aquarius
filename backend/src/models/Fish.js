@@ -41,9 +41,16 @@ const FishSchema = new mongoose.Schema(
     }
   },
   {
-    timestamps: true
+    timestamps: true,
+    toJSON: {
+      virtuals: true
+    }
   }
 );
+
+FishSchema.virtual("photo_url").get(function() {
+  return `http://localhost:3333/files/${this.photo}`;
+});
 
 FishSchema.plugin(mongoosePaginate);
 

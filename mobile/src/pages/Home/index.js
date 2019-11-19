@@ -11,7 +11,7 @@ StatusBar.setBarStyle("light-content");
 
 export default class Home extends Component {
   static navigationOptions = {
-    title: "Aquarius APP",
+    title: "Aquarius",
     headerStyle: {
       backgroundColor: "#0099ff"
     },

@@ -1,11 +1,12 @@
 const mongoose = require("mongoose");
 
+const User = mongoose.model("User");
 const Aquarium = mongoose.model("Aquarium");
 
 module.exports = {
   async index(req, res) {
     const { page = 1 } = req.query;
-    const aquariums = await Aquarium.paginate({ page, limit: 10 });
+    const aquariums = await Aquarium.paginate({}, { page, limit: 10 });
 
     return res.json(aquariums);
   },
@@ -23,38 +24,46 @@ module.exports = {
     return res.json(aquarium);
   },
   async store(req, res) {
-    // const { idUser } = req.params;
-    // const user = await User.findById(idUser);
-    // if (!user) {
-    //   return res.status(404).json({
-    //     message: "User does not exists."
-    //   });
-    // }
-    // if (!req.body) {
-    //   return res.status(400).json({
-    //     message: "Aquarium content can not be empty."
-    //   });
-    // }
-    // const { identifier } = req.body;
-    // if (await Aquarium.findOne({ identifier })) {
-    //   return res.status(400).json({
-    //     message: "Identifier already being used."
-    //   });
-    // }
-    // let content = req.body;
-    // content.user_id = idUser;
-    // const aquarium = await Aquarium.create(content);
-    // return res.json(aquarium);
+    const idUser = req.headers.user_id;
+    const user = await User.findById(idUser);
+
+    if (!user) {
+      return res.status(404).json({
+        message: "User does not exists."
+      });
+    }
+
+    if (!req.body) {
+      return res.status(400).json({
+        message: "Aquarium content can not be empty."
+      });
+    }
+
+    const { identifier } = req.body;
+
+    if (await Aquarium.findOne({ identifier })) {
+      return res.status(400).json({
+        message: "Identifier already being used."
+      });
+    }
+
+    let content = req.body;
+    content.user_id = idUser;
+
+    const aquarium = await Aquarium.create(content);
+    return res.json(aquarium);
   },
   async update(req, res) {
-    const aquarium = await Aquarium.findOneAndUpdate(req.params.id, req.body, {
+    const { idAquarium } = req.params;
+    const aquarium = await Aquarium.findOneAndUpdate(idAquarium, req.body, {
       new: true
     });
 
     return res.json(aquarium);
   },
   async destroy(req, res) {
-    await Aquarium.findByIdAndRemove(req.params.id);
+    const { idAquarium } = req.params;
+    await Aquarium.findByIdAndRemove(idAquarium);
 
     return res.send();
   }

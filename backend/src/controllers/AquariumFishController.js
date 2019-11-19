@@ -7,18 +7,16 @@ module.exports = {
     //
   },
   async update(req, res) {
-    const aquariumFish = await AquariumFish.findOneAndUpdate(
-      req.params.id,
-      req.body,
-      {
-        new: true
-      }
-    );
+    const { idFish } = req.params;
+    const aquariumFish = await AquariumFish.findOneAndUpdate(idFish, req.body, {
+      new: true
+    });
 
     return res.json(aquariumFish);
   },
   async destroy(req, res) {
-    await AquariumFish.findByIdAndRemove(req.params.id);
+    const { idFish } = req.params;
+    await AquariumFish.findByIdAndRemove(idFish);
 
     return res.send();
   }

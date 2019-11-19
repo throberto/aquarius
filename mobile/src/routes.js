@@ -1,5 +1,5 @@
 import { createAppContainer } from "react-navigation";
-// import { createDrawerNavigator } from "react-navigation-drawer";
+import { createDrawerNavigator } from "react-navigation-drawer";
 import { createStackNavigator } from "react-navigation-stack";
 
 import Navigation from "./pages/Navigation";
@@ -16,12 +16,9 @@ import Home from "./pages/Home";
 import ReminderList from "./pages/ReminderList";
 import ReminderRegister from "./pages/ReminderRegister";
 
-const Routes = createAppContainer(
-  createStackNavigator({
-    Navigation,
-    UserSignIn,
-    UserRegister,
-    UserResetPassword,
+const HomeDrawer = createAppContainer(
+  createDrawerNavigator({
+    Home,
     UserProfile,
     AquariumRegister,
     About,
@@ -29,9 +26,15 @@ const Routes = createAppContainer(
     AquariumRegister,
     FishList,
     HelpRegister,
-    Home,
     ReminderList,
     ReminderRegister
+  })
+);
+
+const Routes = createAppContainer(
+  createStackNavigator({
+    // UserSignIn,
+    HomeDrawer
   })
 );
 
