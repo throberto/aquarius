@@ -6,7 +6,11 @@ class App extends React.Component {
       { id: "00", name: "Peixe 1 " },
       { id: "01", name: "Peixe 2" },
       { id: "02", name: "Peixe 3" },
-      { id: "03", name: "Peixe 4" }
+      { id: "03", name: "Peixe 4" },
+      { id: "04", name: "Peixe 5" },
+      { id: "05", name: "Peixe 6" },
+      { id: "06", name: "Peixe 7" },
+      { id: "07", name: "Peixe 8" }
     ]
   };
   render() {
@@ -35,7 +39,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     margin: 4,
     padding: 20,
-    flexBasis: 0,
+    flexBasis: 0
   },
   text: {
     color: "#333333"
