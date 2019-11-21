@@ -1,11 +1,18 @@
 import React, { Component } from "react";
 
-import { View } from "react-native";
+import { View, Text } from "react-native";
 
-// import { Container } from './styles';
+import ReminderComponents from "../../components/Reminder";
+import { DateTittle } from './styles';
 
 export default class ReminderList extends Component {
   render() {
-    return <View />;
+    return (
+      <View>
+        <DateTittle>Hoje</DateTittle>
+        <ReminderComponents />
+        <ReminderComponents />
+      </View>
+    );
   }
 }
