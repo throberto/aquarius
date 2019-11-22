@@ -7,6 +7,8 @@ import LogoComponent from "../../components/Logo";
 
 import { Container, View } from "./styles";
 
+import api from "../../services/api";
+
 StatusBar.setBackgroundColor("#1793F9");
 StatusBar.setBarStyle("light-content");
 
@@ -41,22 +43,33 @@ export default class UserRegister extends Component {
   };
 
   handleRedisterPress = async () => {
-    if (
-      this.state.name.length === 0 ||
-      this.state.email.length === 0 ||
-      this.state.password.length === 0
-    ) {
+    const { name, email, password } = this.state;
+
+    if (name.length === 0 || email.length === 0 || password.length === 0) {
       Alert.alert("Atenção", "Preencha todos os campo.");
     } else {
-      Alert.alert(
-        "Bem Vindo!",
-        "Nome: " +
-          this.state.name +
-          " E-mail: " +
-          this.state.email +
-          " Senha: " +
-          this.state.password
-      );
+      await api
+        .post("/user", {
+          name,
+          email,
+          password
+        })
+        .then(response => {
+          Alert.alert("Atenção", "Poste cadastrado com sucesso.");
+        })
+        .catch(error => {
+          Alert.alert("Atenção", error.response.data.message);
+        });
+
+      // Alert.alert(
+      //   "Bem Vindo!",
+      //   "Nome: " +
+      //     name +
+      //     " E-mail: " +
+      //     email +
+      //     " Senha: " +
+      //     password
+      // );
     }
   };
 

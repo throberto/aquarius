@@ -11,7 +11,7 @@ import About from "./pages/About";
 import AquariumDetails from "./pages/AquariumDetails";
 import AquariumRegister from "./pages/AquariumRegister";
 import FishList from "./pages/FishList";
-import HelpRegister from "./pages/HelpRegister";
+
 import Home from "./pages/Home";
 import ReminderList from "./pages/ReminderList";
 import ReminderRegister from "./pages/ReminderRegister";
@@ -25,7 +25,7 @@ const HomeDrawer = createAppContainer(
     AquariumDetails,
     AquariumRegister,
     FishList,
-    HelpRegister,
+
     ReminderList,
     ReminderRegister
   })
@@ -33,8 +33,8 @@ const HomeDrawer = createAppContainer(
 
 const Routes = createAppContainer(
   createStackNavigator({
-    // UserSignIn,
-    HomeDrawer
+    UserSignIn
+    //HomeDrawer
   })
 );
 
