@@ -25,7 +25,7 @@ const HomeDrawer = createAppContainer(
     AquariumDetails,
     AquariumRegister,
     FishList,
-
+    UserRegister,
     ReminderList,
     ReminderRegister
   })
@@ -33,8 +33,8 @@ const HomeDrawer = createAppContainer(
 
 const Routes = createAppContainer(
   createStackNavigator({
-    UserSignIn
-    //HomeDrawer
+    //UserSignIn
+    HomeDrawer
   })
 );
 

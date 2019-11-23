@@ -31,6 +31,7 @@ export default class UserSignIn extends Component {
 
   handleUserRegisterPress = () => {
     this.props.navigation.navigate("UserRegister");
+    this.props.navigation.navigate("AquariumRegister");
   };
 
   handleUserResetPasswordPress = () => {

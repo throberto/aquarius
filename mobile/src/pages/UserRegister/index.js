@@ -58,7 +58,8 @@ export default class UserRegister extends Component {
           Alert.alert("Atenção", "Poste cadastrado com sucesso.");
         })
         .catch(error => {
-          Alert.alert("Atenção", error.response.data.message);
+          Alert.alert("Atenção", "Deu erro aqui");
+          console.log(error);
         });
 
       // Alert.alert(
