@@ -15,3 +15,7 @@ Aquarius é um aplicativo para dispositivos móveis que promove o controle e ger
 ## Contribuições
  - Thiago Roberto da Silva / 18000109
  - Bruno Araujo / 18000743
+ - Leonardo Larangeiras / 18001951
+ - Helio Cândido / 18002252
+ - Vinicius Contini / 18002254
+ 
